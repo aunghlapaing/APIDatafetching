@@ -2,7 +2,8 @@ let table = document.getElementById ('tableData');
 
 let dataFetching = async () => {
     var temp = "";
-    let dataFetch = await fetch ("https://fakestoreapi.com/products") //fetch data from API link
+    try {
+      let dataFetch = await fetch ("https://fakestoreapi.com/products") //fetch data from API link
     products = await dataFetch.json();
     products.forEach(element => {
         temp += `
@@ -29,8 +30,11 @@ let dataFetching = async () => {
         </thead>
         `+temp;
         console.log(products);
-        
-        
     });
+    }catch (e){
+      console.log(`Error ==> ${e}`);
+    
+    }
+    
     // dataFetching();
 }
