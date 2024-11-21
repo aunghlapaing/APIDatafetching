@@ -1,5 +1,7 @@
-*{
-    box-sizing: border-box;
+.container {
+  display: absolute;
+  margin-top: 5px;
+  margin-left: 20px;
 }
 
 tbody td {
@@ -17,9 +19,6 @@ tbody td {
     opacity: 1;
     font-size: 2em;
   }
-  div {
-    display: block;
-  }
   
   td {
     /* 3. Scale the text using transform on hover */
@@ -36,7 +35,7 @@ tbody td {
   
   table {
     width: 90%;
-    margin: 0 5%;
+    margin: 5%;
     text-align: left;
   }
   th, td {
